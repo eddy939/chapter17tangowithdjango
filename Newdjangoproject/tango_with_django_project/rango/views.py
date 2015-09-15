@@ -232,6 +232,7 @@ def category(request, category_name_slug):
         # So the .get() method returns one model instance or raises an exception
         category = Category.objects.get(slug=category_name_slug)
         context_dict['category_name'] = category.name
+        context_dict['category_name_slug'] = category_name_slug
 
 
         #Retrieve all of the associated pages.
